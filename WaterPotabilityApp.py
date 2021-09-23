@@ -55,10 +55,10 @@ if st.sidebar.button('Predict'):
     
     
 st.image('water.jpg')
-header = st.beta_container()
-body = st.beta_container()
+header = st.container()
+body = st.container()
 with header:
-    col1,col2 = st.beta_columns(2)
+    col1,col2 = st.columns(2)
     plot_type = col1.selectbox('Plot the feature',['histogram','line plot','area chart'])
     feat = col1.selectbox('Which feature',['Solids','Conductivity','Hardness','Trihalomethanes','Sulfate'])
     if plot_type == 'histogram':
@@ -71,7 +71,7 @@ with header:
         col2.area_chart(data[feat][:90])
         col1.header(f'{plot_type} of {feat} feature')
 with body:
-    col1, col2 = st.beta_columns(2)
+    col1, col2 = st.columns(2)
     col1.header('About Me')
     col1.markdown('''My name is Harish Gehlot , I'm pursuing my Computer Science Degree and love to do Machine Learning stuff''')
     col2.header('About Project')
