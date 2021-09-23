@@ -49,9 +49,9 @@ for j in feature_list.keys():
 if st.sidebar.button('Predict'):
     pred = classifier.predict([list(feature_list.values())])
     if pred[0]==0:
-        st.sidebar.markdown('water is not so potable for drinking purpose')
+        st.sidebar.markdown('# water is not so potable for drinking purpose')
     else:
-        st.sidebar.markdown('water is potable for drinking purpose')
+        st.sidebar.markdown('# water is potable for drinking purpose')
     
     
 st.image('water.jpg')
