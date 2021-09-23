@@ -60,7 +60,7 @@ body = st.container()
 with header:
     col1,col2 = st.columns(2)
     plot_type = col1.selectbox('Plot the feature',['histogram','line plot','area chart'])
-    feat = col1.selectbox('Which feature',['Solids','Conductivity','Hardness','Trihalomethanes','Sulfate'])
+    feat = col1.selectbox('Which feature',['ph','Chloramines','Organic_carbon','Turbidity','Solids','Conductivity','Hardness','Trihalomethanes','Sulfate'])
     if plot_type == 'histogram':
         col2.bar_chart(data[feat][:90])
         col1.header(f'{plot_type} of {feat} feature')
